@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><%= pageTitle %></title>
+    </head>
+    <body>
+        <header>
+            <%- include('./partials/header.ejs') %>
+        </header>
+        <a href="/">back</a>
+        <h2>Upload a file</h2>
+        <form action="/api/upload" method="POST" enctype="multipart/form-data">
+            <div>
+                <input type="file" name="fileInput" required>
+            </div>
+            <div>
+                <input type="text" name="folderInput" placeholder="Choose a folder" required>
+            </div>
+            <div>
+                <button type="submit">Upload Image</button>
+            </div>
+        </form>
+        <h2>ERROR: Folder not found!</h2>
+    </body>
+</html>

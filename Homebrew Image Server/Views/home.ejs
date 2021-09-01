@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><%= pageTitle %></title>
+    </head>
+    <body>
+        <header>
+            <%- include('./partials/header.ejs') %>
+        </header>
+        <div>
+            <a href="/add">Create a new folder</a>
+        </div>
+        <div>
+            <a href="/upload">Upload a new image</a>
+        </div>
+        <div>
+            <a href="/delete">Delete a folder</a>
+        </div>
+        <h3>Folders</h3>
+        <ul>
+        <% folders.forEach((folders)=> { %>
+            <li><a href="/folder/<%= folders.name %>"><%= folders.name %></a></li>
+        <% }) %>
+        </ul>
+    </body>
+</html>

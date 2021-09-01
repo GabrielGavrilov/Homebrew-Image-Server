@@ -1,0 +1,6 @@
+{
+    "DBURI": "ENTER YOUR DBURI HERE",
+    "HOST": "localhost",
+    "PORT": 3000,
+    "SERVER_VERSION": "v2.0.3"
+}
